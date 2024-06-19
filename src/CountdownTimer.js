@@ -6,7 +6,7 @@ import './App.css';
 import cdiImage from './cdi.png';
 
 const CountdownTimer = () => {
-  const startDate = useMemo(() => new Date('2023-09-03T00:00:00+02:00'), []);
+  const startDate = useMemo(() => new Date('2023-09-01T00:00:00+02:00'), []);
   const endDate = useMemo(() => new Date('2024-06-28T15:00:00+02:00'), []);
   const [completionRate, setCompletionRate] = useState(0);
   const [showInfo, setShowInfo] = useState(false);

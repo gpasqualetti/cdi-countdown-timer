@@ -47,10 +47,19 @@ const CountdownTimer = () => {
       const totalMinutes = Math.floor((endDate.getTime() - new Date().getTime()) / (1000 * 60));
       const totalSeconds = Math.floor((endDate.getTime() - new Date().getTime()) / 1000);
 
+      const formattedEndDate = endDate.toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+      });
+      const formattedEndTime = endDate.toLocaleTimeString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+      });
+
       return (
         <div>
-          <img src={cdiImage} alt="CDI" className="cdi-image" />
-          <h1>CDI for September Intake will end in</h1>
+          <h1>CDI for September 23 Intake will end in</h1>
           <div className="countdown">
             {days} days {hours} hours {minutes} minutes {seconds} seconds
           </div>
@@ -58,17 +67,18 @@ const CountdownTimer = () => {
             <div>or about {totalHours} hours</div>
             <div>or about {totalMinutes} minutes</div>
             <div>or about {totalSeconds} seconds</div>
+            <h2>on {formattedEndDate} at {formattedEndTime}</h2>
           </div>
           <div className="doughnut-container">
             <div className="doughnut-wrapper">
-              <h2>Completion Rate</h2>
+              <h3>Completion Rate</h3>
               <div className="completion-rate">
                 {completionRate.toFixed(3)}%
               </div>
               <DoughnutChart completionRate={completionRate} />
             </div>
             <div className="doughnut-wrapper">
-              <h2>Days Lapsed</h2>
+              <h3>Days Lapsed</h3>
               <div className="completion-rate">
                 {daysLapsed} days
               </div>

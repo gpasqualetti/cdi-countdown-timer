@@ -57,6 +57,7 @@
   align-items: center; /* Center align items horizontally */
 }
 
+
 .doughnut-wrapper h2 {
   color: white; /* Set the color of the titles to white */
   margin-top: 10px; /* Add space above the title */
@@ -73,6 +74,13 @@
   width: 300px; /* Set fixed width for the doughnut charts */
   height: 400px; /* Set fixed height for the doughnut charts */
   align-items: top;
+}
+
+.doughnut-chart2 {
+  width: 300px; /* Set fixed width for the doughnut charts */
+  height: 420px; /* Set fixed height for the doughnut charts */
+  align-items: top;
+  padding-top: 30px;
 }
 
 .cdi-image {

@@ -121,12 +121,12 @@ const DoughnutWithDynamicValues = () => {
         enabled: true
       }
     },
-    cutout: '60%'
+    cutout: '60%',
   };
 
   return (
     <div className="doughnut-chart-container">
-      <div className="doughnut-chart">
+      <div className="doughnut-chart2">
         <Doughnut data={chartData} options={options} />
       </div>
     </div>

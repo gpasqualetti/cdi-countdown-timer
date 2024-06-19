@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cdi-countdown-timer/static/css/main.b9bedd35.css",
+    "main.js": "/cdi-countdown-timer/static/js/main.2ea07f1e.js",
+    "static/js/453.a786f758.chunk.js": "/cdi-countdown-timer/static/js/453.a786f758.chunk.js",
+    "static/media/cdi.png": "/cdi-countdown-timer/static/media/cdi.7d21dcaae0199b96dbf6.png",
+    "index.html": "/cdi-countdown-timer/index.html",
+    "main.b9bedd35.css.map": "/cdi-countdown-timer/static/css/main.b9bedd35.css.map",
+    "main.2ea07f1e.js.map": "/cdi-countdown-timer/static/js/main.2ea07f1e.js.map",
+    "453.a786f758.chunk.js.map": "/cdi-countdown-timer/static/js/453.a786f758.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9bedd35.css",
+    "static/js/main.2ea07f1e.js"
+  ]
+}

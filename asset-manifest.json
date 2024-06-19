@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cdi-countdown-timer/static/css/main.b586159e.css",
+    "main.css": "/cdi-countdown-timer/static/css/main.117c88aa.css",
     "main.js": "/cdi-countdown-timer/static/js/main.996b53ec.js",
     "static/js/453.a786f758.chunk.js": "/cdi-countdown-timer/static/js/453.a786f758.chunk.js",
     "static/media/cdi.png": "/cdi-countdown-timer/static/media/cdi.7d21dcaae0199b96dbf6.png",
     "index.html": "/cdi-countdown-timer/index.html",
-    "main.b586159e.css.map": "/cdi-countdown-timer/static/css/main.b586159e.css.map",
+    "main.117c88aa.css.map": "/cdi-countdown-timer/static/css/main.117c88aa.css.map",
     "main.996b53ec.js.map": "/cdi-countdown-timer/static/js/main.996b53ec.js.map",
     "453.a786f758.chunk.js.map": "/cdi-countdown-timer/static/js/453.a786f758.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b586159e.css",
+    "static/css/main.117c88aa.css",
     "static/js/main.996b53ec.js"
   ]
 }

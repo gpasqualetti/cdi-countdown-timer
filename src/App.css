@@ -50,7 +50,7 @@
 
 .doughnut-wrapper {
   flex: 1; /* Ensure the doughnut charts take equal space */
-  max-width: 400px; /* Increase the max width of the doughnut charts */
+  max-width: 500px; /* Increase the max width of the doughnut charts */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center align items horizontally */

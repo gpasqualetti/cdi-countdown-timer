@@ -36,7 +36,8 @@
 .completion-rate {
   /* margin-bottom: 20px; /1* Add space between the completion rate and the doughnut chart *1/ */
   margin-top: -20px; /* Adjust margin as needed */
-  font-size: 1.2em; /* Adjust the font size as needed */
+  font-size: 36px; /* Adjust the font size as needed */
+  padding-bottom: 20px;
 }
 
 .doughnut-container {
@@ -59,6 +60,7 @@
 .doughnut-wrapper h2 {
   color: white; /* Set the color of the titles to white */
   margin-top: 10px; /* Add space above the title */
+  font-size: 46px;
 }
 
 .doughnut-chart-container {
@@ -72,7 +74,6 @@
   height: 400px; /* Set fixed height for the doughnut charts */
   align-items: top;
 }
-
 
 .cdi-image {
   width: 150px; /* Adjust the width as needed */

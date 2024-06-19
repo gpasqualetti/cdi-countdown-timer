@@ -10,26 +10,34 @@ const CountdownTimer = () => {
   const endDate = useMemo(() => new Date('2024-06-28T15:00:00+02:00'), []);
   const [completionRate, setCompletionRate] = useState(0);
   const [showInfo, setShowInfo] = useState(false);
+  const [daysLapsed, setDaysLapsed] = useState(0);
 
   const calculateCompletionRate = useCallback(() => {
     const now = new Date();
     const totalDuration = endDate.getTime() - startDate.getTime();
     const completedDuration = now.getTime() - startDate.getTime();
     const rate = (completedDuration / totalDuration) * 100;
-    console.log("Total Duration:", totalDuration);
-    console.log("Completed Duration:", completedDuration);
-    console.log("Completion Rate:", rate);
     return rate;
   }, [endDate, startDate]);
+
+  const calculateDaysLapsed = useCallback(() => {
+    const now = new Date();
+    const completedDuration = now.getTime() - startDate.getTime();
+    const days = Math.floor(completedDuration / (1000 * 60 * 60 * 24));
+    return days;
+  }, [startDate]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       const newRate = calculateCompletionRate();
       setCompletionRate(newRate);
+
+      const newDaysLapsed = calculateDaysLapsed();
+      setDaysLapsed(newDaysLapsed);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [calculateCompletionRate]);
+  }, [calculateCompletionRate, calculateDaysLapsed]);
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -60,22 +68,25 @@ const CountdownTimer = () => {
               <DoughnutChart completionRate={completionRate} />
             </div>
             <div className="doughnut-wrapper">
-              <h2>Distribution of Days</h2>
+              <h2>Days Lapsed</h2>
+              <div className="completion-rate">
+                {daysLapsed} days
+              </div>
               <DoughnutWithDynamicValues />
             </div>
-            </div>
+          </div>
           <div className="footer">
-                    <button
-            className="info-button"
-            onClick={() => setShowInfo(!showInfo)}
-          >
-            Info
-          </button>
+            <button
+              className="info-button"
+              onClick={() => setShowInfo(!showInfo)}
+            >
+              Info
+            </button>
           </div>
           <div className={`info-message ${showInfo ? 'show' : ''}`}>
             This webpage has been created from scratch by GP with the help of GenAI to escape the tedious routines of MS Office
           </div>
-          </div>
+        </div>
       );
     }
   };

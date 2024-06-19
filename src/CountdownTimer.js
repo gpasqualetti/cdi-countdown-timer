@@ -9,6 +9,7 @@ const CountdownTimer = () => {
   const startDate = useMemo(() => new Date('2023-09-03T00:00:00+02:00'), []);
   const endDate = useMemo(() => new Date('2024-06-28T15:00:00+02:00'), []);
   const [completionRate, setCompletionRate] = useState(0);
+  const [showInfo, setShowInfo] = useState(false);
 
   const calculateCompletionRate = useCallback(() => {
     const now = new Date();
@@ -62,8 +63,19 @@ const CountdownTimer = () => {
               <h2>Distribution of Days</h2>
               <DoughnutWithDynamicValues />
             </div>
+            </div>
+          <div className="footer">
+                    <button
+            className="info-button"
+            onClick={() => setShowInfo(!showInfo)}
+          >
+            Info
+          </button>
           </div>
-        </div>
+          <div className={`info-message ${showInfo ? 'show' : ''}`}>
+            This webpage has been created from scratch by GP with the help of GenAI to escape the tedious routines of MS Office
+          </div>
+          </div>
       );
     }
   };
